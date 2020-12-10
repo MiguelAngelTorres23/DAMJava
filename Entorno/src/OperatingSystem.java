@@ -1,5 +1,6 @@
 import jdk.jshell.spi.SPIResolutionException;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +19,7 @@ public class OperatingSystem {
     private boolean osOnlyCommand;
     private int osSpaceRequirement;
     private int osRamMemmoryRequierement;
-    private ArrayList<Software> osSoftware = new ArrayList<Software>();  /** Array de software **/
+    private ArrayList<Software> osSoftware = new ArrayList<Software>();/** Array de software **/
 
    /** Constructor **/
 
@@ -113,4 +114,14 @@ public class OperatingSystem {
     public void setOsSoftware(ArrayList<Software> osSoftware) {
         this.osSoftware = osSoftware;
     }
+
+    //Array Metodos
+    public void ArrayinstallSoftware(Software software){
+        this.osSoftware.add(software);
+    }
+    public void ArraydesinstallSoftware(Software software){
+        this.osSoftware.remove(software);
+    }
+
+
 }

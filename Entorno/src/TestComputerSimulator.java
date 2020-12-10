@@ -13,7 +13,7 @@ public class TestComputerSimulator {
         OperatingSystem op1 = new OperatingSystem("Windows", "XP", "32bits", false, 10, 2);
         OperatingSystem op2 = new OperatingSystem("Windows", "10", "32bits", false, 10, 2);
         Software so1 = new Software("VirtualBox", "32bits", 2, 1);
-        Software so2 = new Software("VirtualBox", "32bits", 5, 2);
+        Software so2 = new Software("Paint", "32bits", 5, 2);
 
 
         /** Para instalar el sistema opertivo **/
@@ -38,9 +38,28 @@ public class TestComputerSimulator {
        // c1.format();
         //System.out.println("Queda "+c1.getHardDisk()+" GB de disco duro y queda "+c1.getRamMemory()+" GB de memoria RAM");
 
+        /** Mete el sistema operativo dentro del array **/
+
+        op1.ArrayinstallSoftware(so1);
+        op1.ArrayinstallSoftware(so2);
+        op1.ArraydesinstallSoftware(so1);
+
+        op1.ArrayinstallSoftware(so1);
+        op1.ArrayinstallSoftware(so2);
+
+        /** BUCLASO Mustra array **/
+        String bucle = " ";
+        int i = 0;
+
+        for (i=0; i< op1.getOsSoftware().size() ; i++ ){
+
+                bucle = bucle + op1.getOsSoftware().get(i).getSoftwareName() + " ";
+
+        }
+
+        System.out.println(bucle);
 
         /** Ver el Ordenador **/
-
 
         System.out.println("ORDENADOR: ");
         System.out.println("----------------------");

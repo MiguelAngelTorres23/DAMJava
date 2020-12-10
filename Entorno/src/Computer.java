@@ -52,6 +52,8 @@ public class Computer {
         }
     }
 
+
+
     public void softwareDesinstall(Software software){
         /** Para instalar el sistema operativo si hay espacio **/
         if ((this.hardDisk >= software.getSoftwareSpaceRequirement()) &&
@@ -60,6 +62,7 @@ public class Computer {
             setHardDisk(this.hardDisk + software.getSoftwareSpaceRequirement());
             setRamMemory(this.ramMemory + software.getSoftwareRamMemoryRquierement());
             System.out.println(software.getSoftwareName() + "se desinstalo correctamente");
+
 
         }
     }

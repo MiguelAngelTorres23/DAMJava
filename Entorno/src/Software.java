@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * PACKAGE_NAME
  * Nombre_project: DAMJava
