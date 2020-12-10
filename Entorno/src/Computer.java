@@ -64,12 +64,13 @@ public class Computer {
         }
     }
 
+    /** Formatea el pc **/
     public void format(){
         this.hardDisk = hardDisk+operatingSystem.getOsSpaceRequirement();
         this.ramMemory = ramMemory+operatingSystem.getOsRamMemmoryRequierement();
         this.operatingSystem=null;
     }
-
+    /** Desinstala 2 softwares **/
     public void uninstallSoftware( Software software, Software software2){
         this.hardDisk = hardDisk + software.getSoftwareSpaceRequirement() + software2.getSoftwareSpaceRequirement();
         this.ramMemory = ramMemory + software.getSoftwareRamMemoryRquierement() + software2.getSoftwareRamMemoryRquierement();
