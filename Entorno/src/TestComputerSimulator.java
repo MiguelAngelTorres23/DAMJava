@@ -17,7 +17,7 @@ public class TestComputerSimulator {
 
 
         /** Para instalar el sistema opertivo **/
-        //c1.operatingSystemInstaller(op1);
+        ///c1.operatingSystemInstaller(op1);
 
         /** Para desintalar el sistema opertivo **/
         //c1.operatingSystemDesinstaller(op1);

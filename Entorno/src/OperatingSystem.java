@@ -32,18 +32,6 @@ public class OperatingSystem {
        this.osRamMemmoryRequierement = osRamMemmoryRequierement;
    }
 
-
-
-   /** public void installSoftware(Software osSoftware){
-        this.osSoftware.add(osSoftware);
-    }
-    public void uninstallSoftware(Software osSoftware){
-        this.osSoftware.remove(osSoftware);
-    } **/
-
-
-
-
     /** Para instalar el sistema operativo si hay espacio **/
      public void softwareinstall(Computer computer, Software software){
         if ((computer.getHardDisk() >= software.getSoftwareSpaceRequirement()) &&
