@@ -45,16 +45,31 @@ public class OperatingSystem {
 
 
     /** Para instalar el sistema operativo si hay espacio **/
-/** public void softwareinstall(Computer computer, Software software){
- if ((computer.getHardDisk() >= software.getSoftwareSpaceRequirement()) &&
- (computer.getRamMemory() >= software.getSoftwareRamMemoryRquierement())
- ){
- computer.setHardDisk(computer.getHardDisk() - software.getSoftwareSpaceRequirement());
- computer.setRamMemory(computer.getRamMemory() - software.getSoftwareRamMemoryRquierement());
- System.out.println(software.getSoftwareName() + "se instalo correctamente");
+     public void softwareinstall(Computer computer, Software software){
+        if ((computer.getHardDisk() >= software.getSoftwareSpaceRequirement()) &&
+        (computer.getRamMemory() >= software.getSoftwareRamMemoryRquierement())
+        ){ computer.setHardDisk(computer.getHardDisk() - software.getSoftwareSpaceRequirement());
+        computer.setRamMemory(computer.getRamMemory() - software.getSoftwareRamMemoryRquierement());
+        this.osSoftware.add(software);
 
- }
- } **/
+        System.out.println(software.getSoftwareName() + "se instalo correctamente");
+
+        }else {
+            System.out.println("No se ha instalado");
+         }
+        }
+    public void softwaredesinstall(Computer computer, Software software){
+        if ((computer.getHardDisk() >= software.getSoftwareSpaceRequirement()) &&
+                (computer.getRamMemory() >= software.getSoftwareRamMemoryRquierement())
+        ){ computer.setHardDisk(computer.getHardDisk() + software.getSoftwareSpaceRequirement());
+            computer.setRamMemory(computer.getRamMemory() + software.getSoftwareRamMemoryRquierement());
+            this.osSoftware.remove(software);
+
+            System.out.println(software.getSoftwareName() + "se desinstalado correctamente");
+        }else {
+            System.out.println("No se ha desinstalado");
+        }
+    }
 
     /** Get and Set **/
 
@@ -116,12 +131,13 @@ public class OperatingSystem {
     }
 
     //Array Metodos
-    public void ArrayinstallSoftware(Software software){
+    // Ya los meto cuando instalo el software o lo desinstalo
+    /** public void ArrayinstallSoftware(Software software){
         this.osSoftware.add(software);
     }
     public void ArraydesinstallSoftware(Software software){
         this.osSoftware.remove(software);
-    }
+    } **/
 
 
 }

@@ -24,28 +24,19 @@ public class TestComputerSimulator {
 
 
         /** Para instalar el software **/
-        //c1.softwareinstall(so1);
-        //c1.softwareinstall(so2);
+        //op1.softwareinstall(c1,so1);
+        //op1.softwareinstall(c1,so2);
 
         /** Para desinstalar el software **/
-        //c1.softwareDesinstall(so1);
+        //op1.softwaredesinstall(c1,so1);
 
         /** Para desinstalar dos software a la vez **/
         //c1.uninstallSoftware(so1,so2);
 
 
         /** Para borrar (formatear el ordenador) **/
-       // c1.format();
+        //c1.format();
         //System.out.println("Queda "+c1.getHardDisk()+" GB de disco duro y queda "+c1.getRamMemory()+" GB de memoria RAM");
-
-        /** Mete el sistema operativo dentro del array **/
-
-        op1.ArrayinstallSoftware(so1);
-        op1.ArrayinstallSoftware(so2);
-        op1.ArraydesinstallSoftware(so1);
-
-        op1.ArrayinstallSoftware(so1);
-        op1.ArrayinstallSoftware(so2);
 
         /** BUCLASO Mustra array **/
         String bucle = " ";
@@ -57,7 +48,7 @@ public class TestComputerSimulator {
 
         }
 
-        System.out.println(bucle);
+        System.out.println("Los software instalados son: " + bucle);
 
         /** Ver el Ordenador **/
 

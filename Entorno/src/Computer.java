@@ -15,11 +15,13 @@ public class Computer {
    private OperatingSystem operatingSystem;
 
 
+
     public Computer(String name, int ramMemory, int hardDisk, OperatingSystem operatingSystem) {
         this.name = name;
         this.ramMemory = ramMemory;
         this.hardDisk = hardDisk;
         this.operatingSystem = operatingSystem;
+
     }
 
     /** Metodos **/
@@ -29,6 +31,9 @@ public class Computer {
             this.hardDisk -= operatingSystem.getOsSpaceRequirement();
             this.ramMemory -= operatingSystem.getOsRamMemmoryRequierement();
             this.operatingSystem = operatingSystem;
+            System.out.println("El sistema operativo se ha instalado correctamente");
+        } else {
+            System.out.println("El sistema operativo no se ha podido instalar");
         }
     }
 
@@ -37,41 +42,18 @@ public class Computer {
             this.hardDisk += operatingSystem.getOsSpaceRequirement();
             this.ramMemory += operatingSystem.getOsRamMemmoryRequierement();
             this.operatingSystem = operatingSystem;
-        }
-    }
-
-    public void softwareinstall(Software software){
-        /** Para instalar el sistema operativo si hay espacio **/
-        if ((this.hardDisk >= software.getSoftwareSpaceRequirement()) &&
-                (this.ramMemory >= software.getSoftwareRamMemoryRquierement())
-        ){
-            setHardDisk(this.hardDisk - software.getSoftwareSpaceRequirement());
-            setRamMemory(this.ramMemory - software.getSoftwareRamMemoryRquierement());
-            System.out.println(software.getSoftwareName() + "se instalo correctamente");
-
-        }
-    }
-
-
-
-    public void softwareDesinstall(Software software){
-        /** Para instalar el sistema operativo si hay espacio **/
-        if ((this.hardDisk >= software.getSoftwareSpaceRequirement()) &&
-                (this.ramMemory >= software.getSoftwareRamMemoryRquierement())
-        ){
-            setHardDisk(this.hardDisk + software.getSoftwareSpaceRequirement());
-            setRamMemory(this.ramMemory + software.getSoftwareRamMemoryRquierement());
-            System.out.println(software.getSoftwareName() + "se desinstalo correctamente");
-
-
+            System.out.println("El sistema operativo se ha desinstalado correctamente");
+        }else {
+            System.out.println("El sistema operativo no se ha podido desinstalar");
         }
     }
 
     /** Formatea el pc **/
     public void format(){
-        this.hardDisk = hardDisk+operatingSystem.getOsSpaceRequirement();
+        this.hardDisk = hardDisk+operatingSystem.getOsSpaceRequirement() ;
         this.ramMemory = ramMemory+operatingSystem.getOsRamMemmoryRequierement();
         this.operatingSystem=null;
+
     }
     /** Desinstala 2 softwares **/
     public void uninstallSoftware( Software software, Software software2){
