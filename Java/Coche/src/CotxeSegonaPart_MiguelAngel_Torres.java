@@ -12,7 +12,7 @@ public class CotxeSegonaPart_MiguelAngel_Torres extends Cotxe_MiguelAngel_Torres
     protected CanviarMarxaAutomatic canviarmarxaautomatic;
     protected CanviarMarxaManual canviarmarxamanual;
 
-
+    /** Como ya tenemos los atributos heredado añadimos CanviarMarxaManual y CanviarMarxaAutomatic **/
     public CotxeSegonaPart_MiguelAngel_Torres(String marca, String model, TipusCanvi tipusCanvi, EstatsMotorCotxe estadomotorcoche, CanviarMarxaAutomatic canviarmarxaautomatic, CanviarMarxaManual canviarmarxamanual) {
         super(marca, model, tipusCanvi, estadomotorcoche);
 
@@ -21,8 +21,9 @@ public class CotxeSegonaPart_MiguelAngel_Torres extends Cotxe_MiguelAngel_Torres
 
     }
 
-
-    public void CanviarMarxaAutomatic(char marcha) {
+    /** Este metodo comprueba que sea automatico y que se sube o se baja correctamente la marcha
+     * Si no es asi salta el exception **/
+    public void CanviarMarxaAutomatic(char marcha) throws Exception {
         if (tipuscanvi == TipusCanvi.CanviAutomatic && canviarmarxaautomatic == CanviarMarxaAutomatic.R && marcha == '+') {
             canviarmarxaautomatic = CanviarMarxaAutomatic.N;
         }else if (tipuscanvi == TipusCanvi.CanviAutomatic && canviarmarxaautomatic == CanviarMarxaAutomatic.N && marcha == '+'){
@@ -32,11 +33,12 @@ public class CotxeSegonaPart_MiguelAngel_Torres extends Cotxe_MiguelAngel_Torres
         }else if (tipuscanvi == TipusCanvi.CanviAutomatic && canviarmarxaautomatic == CanviarMarxaAutomatic.N && marcha == '-'){
             canviarmarxaautomatic = CanviarMarxaAutomatic.R;
         } else {
-            System.out.println("Lo que quiere realizar no es posible");
+            throw new Exception("Lo que quiere realizar con las marchas automaticas no es posible");
         }
     }
-
-    public void CanviarMarxaManual (char marcha){
+    /** Este metodo comprueba que sea manual y que se sube o se baja correctamente la marcha
+     * Si no es asi salta el exception **/
+    public void CanviarMarxaManual (char marcha) throws Exception {
         if (tipuscanvi == TipusCanvi.CanviManual && canviarmarxamanual == CanviarMarxaManual.R && marcha == '+'){
             canviarmarxamanual = CanviarMarxaManual.N;
         } else if (tipuscanvi == TipusCanvi.CanviManual && canviarmarxamanual == CanviarMarxaManual.N && marcha == '+'){
@@ -68,18 +70,21 @@ public class CotxeSegonaPart_MiguelAngel_Torres extends Cotxe_MiguelAngel_Torres
         }else if (tipuscanvi == TipusCanvi.CanviManual && canviarmarxamanual == CanviarMarxaManual.N && marcha == '-'){
             canviarmarxamanual = CanviarMarxaManual.R;
         } else {
-            System.out.println("Lo que quiere realizar no es posible");
+            throw new Exception("Lo que quiere realizar con las marchas manuales no es posible");
         }
 
 
     }
 
+
+    /** Aquí tenemos dos enum que los utilizamos para saber que marchas tiene cada tipo de coche**/
+    /** Este enum es para el marchas automaticas **/
     public enum CanviarMarxaAutomatic {
         F,
         N,
-        R;
+        R
     }
-
+    /** Este enum es para el marchas manuales **/
     public enum CanviarMarxaManual {
         R,
         N,
@@ -88,24 +93,22 @@ public class CotxeSegonaPart_MiguelAngel_Torres extends Cotxe_MiguelAngel_Torres
         Tercera,
         Cuarta,
         Quinta,
-        Sexta;
+        Sexta
     }
+
+    /** Estos son los gets para poder ver que marcha tienen en ese momento **/
 
     public CanviarMarxaAutomatic getCanviarmarxaautomatic() {
         return canviarmarxaautomatic;
     }
 
-    public void setCanviarmarxaautomatic(CanviarMarxaAutomatic canviarmarxaautomatic) {
-        this.canviarmarxaautomatic = canviarmarxaautomatic;
-    }
+
 
     public CanviarMarxaManual getCanviarmarxamanual() {
         return canviarmarxamanual;
     }
 
-    public void setCanviarmarxamanual(CanviarMarxaManual canviarmarxamanual) {
-        this.canviarmarxamanual = canviarmarxamanual;
-    }
+
 
 
 }
