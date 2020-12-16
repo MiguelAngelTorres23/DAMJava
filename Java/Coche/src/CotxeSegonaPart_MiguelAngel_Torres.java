@@ -16,15 +16,6 @@ public class CotxeSegonaPart_MiguelAngel_Torres extends Cotxe_MiguelAngel_Torres
     public CotxeSegonaPart_MiguelAngel_Torres(String marca, String model, TipusCanvi tipusCanvi, EstatsMotorCotxe estadomotorcoche, CanviarMarxaAutomatic canviarmarxaautomatic, CanviarMarxaManual canviarmarxamanual) {
         super(marca, model, tipusCanvi, estadomotorcoche);
 
-       /** if(tipusCanvi == TipusCanvi.CanviManual){
-            this.canviarmarxamanual = canviarmarxamanual;
-            this.canviarmarxaautomatic = null;
-        }else {
-            this.canviarmarxaautomatic = canviarmarxaautomatic;
-            this.canviarmarxamanual = null;
-        } **/
-
-
         this.canviarmarxaautomatic = canviarmarxaautomatic;
         this.canviarmarxamanual = canviarmarxamanual;
 
@@ -81,6 +72,23 @@ public class CotxeSegonaPart_MiguelAngel_Torres extends Cotxe_MiguelAngel_Torres
         }
 
 
+    }
+
+    public enum CanviarMarxaAutomatic {
+        F,
+        N,
+        R;
+    }
+
+    public enum CanviarMarxaManual {
+        R,
+        N,
+        Primera,
+        Segunda,
+        Tercera,
+        Cuarta,
+        Quinta,
+        Sexta;
     }
 
     public CanviarMarxaAutomatic getCanviarmarxaautomatic() {
