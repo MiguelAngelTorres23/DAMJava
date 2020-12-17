@@ -77,6 +77,7 @@ public class JuegoNumero {
                         break;
                     case 2:
                         System.out.println("El dinero que has ganado es " + getDineroganadopersona() + " €");
+                        MenuPrincipal();
                         break;
                     case 3:
                         System.exit(0);
