@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Java/Dias/Dias.iml" filepath="$PROJECT_DIR$/Java/Dias/Dias.iml" />
       <module fileurl="file://$PROJECT_DIR$/Entorno/Entorno.iml" filepath="$PROJECT_DIR$/Entorno/Entorno.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java/Java.iml" filepath="$PROJECT_DIR$/Java/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Entorno/JuegoMaquinaNumero/JuegoMaquinaNumero.iml" filepath="$PROJECT_DIR$/Entorno/JuegoMaquinaNumero/JuegoMaquinaNumero.iml" />
     </modules>
   </component>
 </project>
