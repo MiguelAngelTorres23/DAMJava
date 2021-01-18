@@ -14,13 +14,12 @@ public class JuegoNumero {
     public static int dineroganadopersona = 0;
 
     private static void Jugar() {
-        if (dineromaquina > 5) {
+        if (dineromaquina >= 5) {
             Scanner consola = new Scanner(System.in);
             int numerorandom = (int) (Math.random() * 99 + 1);
             System.out.println("*Se ha introducido una moneda*");
             dineromaquina += 1;
             System.out.println("En que numero estoy pensando?: ");
-            System.out.println(numerorandom);
             int numero = consola.nextInt();
             boolean acertado = false;
             int numerointentos = 4;
@@ -44,23 +43,22 @@ public class JuegoNumero {
 
             }
 
-            if (acertado == true && dineromaquina >= 5) {
-                System.out.println("Has acertado el numero. Eres un crack, tifon, huracan, capitan de navio, todoterreno.");
-                dineroganadopersona += 5;
-                dineromaquina -= 5;
-                System.out.println("El dinero de la maquina es  " + dineromaquina + " € " + " y llevas acumulado " + dineroganadopersona + " € ");
-                if (dineromaquina >= 5) {
+                if (acertado == true && dineromaquina >= 5) {
+                    System.out.println("Has acertado el numero. Eres un crack, tifon, huracan, capitan de navio, todoterreno.");
+                    dineroganadopersona += 5;
+                    dineromaquina -= 5;
+                    System.out.println("El dinero de la maquina es  " + dineromaquina + " € " +
+                            " y llevas acumulado " + dineroganadopersona + " € ");
+                            MenuPrincipal();
+                } else {
+                    System.out.println("Lo siento mi pana te has quedado sin intentos");
                     MenuPrincipal();
                 }
             } else {
-                System.out.println("Lo siento mi pana te has quedado sin intentos");
-                MenuPrincipal();
+                System.out.println("Bro dejala, ya esta muerta. El dinero de la maquina es: " + dineromaquina);
+                System.out.println("*Dinero retirado* \n" + "Has ganado " + dineroganadopersona);
             }
-        } else {
-            System.out.println("Bro dejala, ya esta muerta. El dinero de la maquina es: " + dineromaquina);
-
         }
-    }
 
     private static int getDineroganadopersona() {
         return dineroganadopersona;
@@ -93,3 +91,4 @@ public class JuegoNumero {
 
 
 }
+
