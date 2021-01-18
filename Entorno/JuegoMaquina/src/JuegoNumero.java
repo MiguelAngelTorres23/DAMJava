@@ -20,6 +20,7 @@ public class JuegoNumero {
             System.out.println("*Se ha introducido una moneda*");
             dineromaquina += 1;
             System.out.println("En que numero estoy pensando?: ");
+            System.out.println(numerorandom);
             int numero = consola.nextInt();
             boolean acertado = false;
             int numerointentos = 4;
@@ -56,7 +57,7 @@ public class JuegoNumero {
                 }
             } else {
                 System.out.println("Bro dejala, ya esta muerta. El dinero de la maquina es: " + dineromaquina);
-                System.out.println("*Dinero retirado* \n" + "Has ganado " + dineroganadopersona);
+                System.out.println("*Dinero retirado* \n" + "Has ganado " + dineroganadopersona + "€");
             }
         }
 
