@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Entorno/Cine/Cine.iml" filepath="$PROJECT_DIR$/Entorno/Cine/Cine.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java/Coche/Coche.iml" filepath="$PROJECT_DIR$/Java/Coche/Coche.iml" />
       <module fileurl="file://$PROJECT_DIR$/CuadernoJavaBucles/CuadernoJavaBucles.iml" filepath="$PROJECT_DIR$/CuadernoJavaBucles/CuadernoJavaBucles.iml" />
       <module fileurl="file://$PROJECT_DIR$/CuadernoJavaClases/CuadernoJavaClases.iml" filepath="$PROJECT_DIR$/CuadernoJavaClases/CuadernoJavaClases.iml" />
@@ -12,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/Java/Java.iml" filepath="$PROJECT_DIR$/Java/Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Entorno/JuegoMaquina/JuegoMaquina.iml" filepath="$PROJECT_DIR$/Entorno/JuegoMaquina/JuegoMaquina.iml" />
       <module fileurl="file://$PROJECT_DIR$/Entorno/JuegoMaquinaNumero/JuegoMaquinaNumero.iml" filepath="$PROJECT_DIR$/Entorno/JuegoMaquinaNumero/JuegoMaquinaNumero.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/LecturaEscritura/LecturaEscritura.iml" filepath="$PROJECT_DIR$/Java/LecturaEscritura/LecturaEscritura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Matriz/Matriz.iml" filepath="$PROJECT_DIR$/Java/Matriz/Matriz.iml" />
     </modules>
   </component>
 </project>
