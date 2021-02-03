@@ -67,7 +67,7 @@ public class Cine {
         //System.out.println("Director: " + pelicula.director);
         //System.out.println("Duracion: " + pelicula.durada);
         //System.out.println("Edad minima: " + pelicula.edadminima);
-        //System.out.println("La recaudacion total a sido: " + cine.getDineroObtenido() + " euros");
+        System.out.println("La recaudacion total a sido: " + cine.getDineroObtenido() + " euros");
         long fintiempo = System.currentTimeMillis();
         System.out.println("El programa a durado: "+ (fintiempo - tiempo) + " milisegundos");
         System.out.println(cine.arrayEspectador);
