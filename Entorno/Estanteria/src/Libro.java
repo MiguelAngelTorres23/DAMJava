@@ -18,9 +18,10 @@ public class Libro {
         this.Qualificació = qualificació;
     }
 
-    @Override
+
+     @Override
     public String toString(){
-        return  "Titulo: " +getTitol() + "\n" + "Autor: " + getAutor() + "\n" + "Cualificacion: " + getQualificació();
+        return  "Titulo: " +getTitol() + "\n" + "Autor: " + getAutor() + "\n" + "Cualificacion: " + getQualificació() + "\n";
     }
 
 
